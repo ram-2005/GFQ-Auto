@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Boring Google Forms Automator",
+  "version": "0.1.0",
+  "description": "Does your college make you high cortisol with those unneccesary google forms dont worry this the solution for that",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://docs.google.com/forms/*"
+      ],
+      "js": ["src/content/question-extractor.js"]
+    }
+  ]
+}
