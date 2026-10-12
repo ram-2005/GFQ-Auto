@@ -9,7 +9,10 @@
       "matches": [
         "*://docs.google.com/forms/*"
       ],
-      "js": ["src/content/question-extractor.js"]
+      "js": ["src/content/question-extractor.js",
+             "src/content/answer-fetcher.js",
+             "src/content/preprocessor.js",
+             "src/content/main.js"]
     }
   ]
 }
