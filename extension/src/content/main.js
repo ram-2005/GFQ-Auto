@@ -7,7 +7,13 @@ async function main() {
 
     const result = await sendQuestions(data);
 
-    console.log("Server response :", result);
+    if (!result || !Array.isArray(result.answers)) {
+      throw new Error("Server response does not contain answer array");
+    }
+
+    const report = answerFiller(result.answers);
+    console.log("Filling completed:", report);
+
 
   } catch (error) {
     console.error("Failed to process questions:", error);

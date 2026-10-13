@@ -11,6 +11,7 @@
       ],
       "js": ["src/content/question-extractor.js",
              "src/content/answer-fetcher.js",
+             "src/content/answer-filler.js",
              "src/content/preprocessor.js",
              "src/content/main.js"]
     }

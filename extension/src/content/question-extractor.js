@@ -1,3 +1,5 @@
+const questionElements = new Map();
+
 function questionExtractor() {
   /*
   * Extracts all questions from the Google form and returns them as a arrray of question objects
@@ -15,6 +17,8 @@ function questionExtractor() {
 
   const questions = [];
 
+  questionElements.clear();
+
   const formItems = document.querySelectorAll('[role="listitem"]');
 
   formItems.forEach((item, index) => {
@@ -28,6 +32,8 @@ function questionExtractor() {
     };
 
     questions.push(question);
+
+    questionElements.set(question.id, item);
 
   });
 
